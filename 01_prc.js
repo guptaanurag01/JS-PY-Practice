@@ -66,24 +66,48 @@
 // console.log(flattenArrayModern(nestedArr)); // Output: [1, 2, 3, 4, 5, 6, 7]
 
 
-function flattenArrayRecursive(arr) {
-  let flattened = [];
+// function flattenArrayRecursive(arr) {
+//   let flattened = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
 
-    if (Array.isArray(element)) {
-      // If the element is an array, recursively call the function
-      flattened = flattened.concat(flattenArrayRecursive(element));
-    } else {
-      // If it's not an array, just push it to the result
-      flattened.push(element);
-    }
-  }
+//     if (Array.isArray(element)) {
+//       // If the element is an array, recursively call the function
+//       flattened = flattened.concat(flattenArrayRecursive(element));
+//     } else {
+//       // If it's not an array, just push it to the result
+//       flattened.push(element);
+//     }
+//   }
 
-  return flattened;
-}
+//   return flattened;
+// }
 
-// // Example usage:
-const nestedArr = [1, [2, [3, 4]], 5, [6, 7]];
-console.log(flattenArrayRecursive(nestedArr)); // Output: [1, 2, 3, 4, 5, 6, 7]
+// // // Example usage:
+// const nestedArr = [1, [2, [3, 4]], 5, [6, 7]];
+// console.log(flattenArrayRecursive(nestedArr)); // Output: [1, 2, 3, 4, 5, 6, 7]
+
+
+
+
+
+// setTimeout(() => {
+//   console.log("setTimeout called After 1 Second");
+// }, 1000);
+
+
+
+setInterval(() => {
+  console.log("setInterval called After 1 Second");
+}, 1000);
+
+
+
+// function repeat() {
+//   setTimeout(() => {
+//     console.log("Safe Loop");
+//     repeat();
+//   }, 1000);
+// }
+// repeat();
