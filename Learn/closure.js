@@ -5,10 +5,8 @@ function outerFunction(){
 	}	
 	return innerFunction;
 }
-
 const closureFunction =  outerFunction();
 closureFunction();
-
 
 
 // function multiplier(factor){
@@ -39,7 +37,6 @@ closureFunction();
 	
 // 	inner();
 //   }
-  
 //   outer();
   
 // let globalVar = 'I am Global';
@@ -56,7 +53,6 @@ closureFunction();
   
 //   inner();
 // }
-
 // outer();
 
 

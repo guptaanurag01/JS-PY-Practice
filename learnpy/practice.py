@@ -48,7 +48,7 @@
 # print(km, "kms will be", miles, "miles")
 
 
-#check if a number is postive, negative  or zero
+# #check if a number is postive, negative  or zero
 # num = 0
 # if num > 0:
 #     print("Postive")
@@ -58,7 +58,7 @@
 #     print("Negative")
     
     
-# Odd Even
+# # Odd Even
 # num = 13
 # if num % 2 == 0:
 #     print("Number is even")

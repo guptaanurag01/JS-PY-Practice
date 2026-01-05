@@ -73,7 +73,7 @@
 
 
 
-// let bookcab =  new Promise((resolve, reject) => {
+// let bookcab = new Promise((resolve, reject) => {
 //     let isCabAvailable = false;
 //     if(isCabAvailable){
 //         resolve('Cab is available');

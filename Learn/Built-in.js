@@ -133,7 +133,7 @@
 
 
 
-// function sum(num, ...args) {
+// function sum(num, ...arg) {
 //     console.log(args);
 // }
 // sum(1, 2, 3);

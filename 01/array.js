@@ -230,9 +230,7 @@
 //   res = hello();
 //   console.log(res);
 // }
-
 // start();
-
 
 
 // var x = 21;
@@ -344,3 +342,5 @@
 // });
 // p.then((res) => console.log(res))
 //  .catch((err) => console.log(err));
+
+
