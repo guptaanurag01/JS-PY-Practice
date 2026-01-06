@@ -31,8 +31,8 @@
 //     }
 //     return true;
 // }
-
 // console.log(valid_anagram('Anurag', 'garunA'))
+
 
 // function charCount(str){
 //     let result = {};
@@ -49,13 +49,22 @@
 // }
 // console.log(charCount("Hello"));
 
-function charCount(str) {
-  let result = {};
-  for (const i of str.toLowerCase()) {
-    if (result[i] > 0) result[i]++; 
-    else result[i] = 1;
-  }
-  return result;
-}
+// function charCount(str) {
+//   let result = {};
+//   for (const i of str.toLowerCase()) {
+//     if (result[i] > 0) result[i]++;
+//     else result[i] = 1;
+//   }
+//   return result;
+// }
 
-console.log(charCount("HellO"));
+// console.log(charCount("HellO"));
+
+// const charCount = (str)=>{
+// let result = {};
+// for(let i of str.toLowerCase()){
+//   result[i] = (result[i] || 0) + 1;
+// }
+// return result
+// }
+// console.log(charCount("HelLo"))
