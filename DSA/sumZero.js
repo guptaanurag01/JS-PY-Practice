@@ -24,3 +24,6 @@ function sumZero(arr){
     }
 }
 console.log(sumZero([2,-2, -1, 0, 1]))
+
+
+

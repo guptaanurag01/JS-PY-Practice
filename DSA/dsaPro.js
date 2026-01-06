@@ -11,21 +11,21 @@
 // console.log(SmallestOfThree(30,1,9));
 
 // // Revising a array
-const ArrayReverse = (arr) => {
-  let start = 0;
-  let end = arr.length - 1;
-  while (start < end) {   
-    let temp = arr[start];
-    arr[start] = arr[end];
-    arr[end] = temp;
-    start++;
-    end--;
-  }
-  return arr;
-};
-let arr = [56, 89, 45, 42];
-ArrayReverse(arr);
-console.log(arr);
+// const ArrayReverse = (arr) => {
+//   let start = 0;
+//   let end = arr.length - 1;
+//   while (start < end) {
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
+//     start++;
+//     end--;
+//   }
+//   return arr;
+// };
+// let arr = [56, 89, 45, 42];
+// ArrayReverse(arr);
+// console.log(arr);
 
 // let data = [9,7,5,3,1];
 // let temp;
@@ -75,7 +75,6 @@ console.log(arr);
 // let rst = maxmin(datas)
 // console.log(rst.max)
 // console.log(rst.min)
-
 
 // function rotateArray(arr, k) {
 // 	let n = arr.length;
@@ -230,7 +229,7 @@ console.log(arr);
 // // Using bubbleSort shorting Array
 // let bub = [89, 13, 56, 4, 26, 9]
 // for (let i = 0; i < bub.length; i++) {
-//     let swapped = false;  
+//     let swapped = false;
 //     for (let j = 0; j < bub.length -1 -i; j++) {
 //         if (bub[j] > bub[j + 1]) {
 //             let temp = bub[j]
@@ -306,3 +305,143 @@ console.log(arr);
 //         console.log(i)
 //     }, 1000);
 // }
+
+// 2D Array Program
+
+// Sample 2D Array (Matrix)
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+// 1. Print Matrix
+function printMatrix(mat) {
+  console.log("Matrix:");
+  for (let row of mat) {
+    console.log(row.join("  "));
+  }
+}
+
+// 2. Sum of All Elements
+function sumMatrix(mat) {
+  let sum = 0;
+  for (let row of mat) {
+    for (let val of row) {
+      sum += val;
+    }
+  }
+  return sum;
+}
+
+// 3. Maximum Element
+function maxElement(mat) {
+  let max = mat[0][0];
+  for (let row of mat) {
+    for (let val of row) {
+      if (val > max) max = val;
+    }
+  }
+  return max;
+}
+
+// 4. Row-wise Sum
+function rowWiseSum(mat) {
+  return mat.map((row) => row.reduce((a, b) => a + b, 0));
+}
+
+// 5. Column-wise Sum
+function columnWiseSum(mat) {
+  let res = Array(mat[0].length).fill(0);
+  for (let r = 0; r < mat.length; r++) {
+    for (let c = 0; c < mat[0].length; c++) {
+      res[c] += mat[r][c];
+    }
+  }
+  return res;
+}
+
+// 6. Transpose of Matrix
+function transposeMatrix(mat) {
+  let res = [];
+  for (let c = 0; c < mat[0].length; c++) {
+    res[c] = [];
+    for (let r = 0; r < mat.length; r++) {
+      res[c][r] = mat[r][c];
+    }
+  }
+  return res;
+}
+
+// 7. Diagonal Sum
+function diagonalSum(mat) {
+  let sum = 0;
+  for (let i = 0; i < mat.length; i++) {
+    sum += mat[i][i];
+  }
+  return sum;
+}
+
+// 8. Search Element
+function searchElement(mat, target) {
+  for (let row of mat) {
+    if (row.includes(target)) return true;
+  }
+  return false;
+}
+
+// 9. Rotate 90 Degree Clockwise
+function rotate90(mat) {
+  let t = transposeMatrix(mat);
+  return t.map((row) => row.reverse());
+}
+
+// =====================
+// Function Calls
+// =====================
+
+// printMatrix(matrix);
+
+// console.log("\nSum of all elements:", sumMatrix(matrix));
+// console.log("Maximum element:", maxElement(matrix));
+// console.log("Row-wise sum:", rowWiseSum(matrix));
+// console.log("Column-wise sum:", columnWiseSum(matrix));
+// console.log("Diagonal sum:", diagonalSum(matrix));
+// console.log("Search 5:", searchElement(matrix, 5)  );
+// console.log("Search 15:", searchElement(matrix, 15));
+
+// console.log("\nTranspose:");
+// printMatrix(transposeMatrix(matrix));
+
+// console.log("\nRotated 90° Clockwise:");
+// printMatrix(rotate90(matrix));
+
+
+const TwoDmatrix = [
+  [1, "*", 2, "*", "*", 3],
+  [4, "*", 5, "*", 6, "*"],
+  [7, "*", 8, "*", "*", 9],
+];
+
+const extractNumbers = (matrix) => {
+  let result = [];
+  for (let row of matrix) {
+    for (let val of row) {
+      if (typeof val === "number") {
+        result.push(val);
+      }
+    }
+  }
+  return result;
+};
+console.log(extractNumbers(TwoDmatrix));
+
+
+
+// const extractNumbers1 = (matrix) =>
+//   matrix.flat().filter(val => typeof val === "number");
+
+// console.log(extractNumbers1(TwoDmatrix));
+
+
+

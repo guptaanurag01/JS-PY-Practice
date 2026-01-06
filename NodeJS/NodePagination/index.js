@@ -41,42 +41,32 @@
 
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-
-
-
 ////////////////////////////////////////////////////////////////////////
 // //   USING ORM  npm install sequelize pg pg-hstore           ////////
 ////////////////////////////////////////////////////////////////////////
 
-
-const express = require("express");
-const User = require("./user");
-
-const app = express();
-const port = 3000;
-
-app.get("/user", async(req, res)=>{
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 1;
-  const offset = (page - 1) * limit;
-
-  try {
-    const result = User.findAndCountAll({
-      limit,
-      offset,
-      order:[['id',"ASC"]]
-    })
-
-    res.json({
-      data:(await result).rows,
-      totalRecords: ((await result).count),
-      page,
-      limit
-    })
-  } catch (error) {
-    res.status(500).json({error:error.message})
-  }
-})
-
-
-app.listen(port, () => console.log(`Example app listening on port http://localhost:${port}`));
+// const express = require("express");
+// const User = require("./user");
+// const app = express();
+// const port = 3000;
+// app.get("/user", async(req, res)=>{
+//   const page = parseInt(req.query.page) || 1;
+//   const limit = parseInt(req.query.limit) || 1;
+//   const offset = (page - 1) * limit;
+//   try {
+//     const result = User.findAndCountAll({
+//       limit,
+//       offset,
+//       order:[['id',"ASC"]]
+//     })
+//     res.json({
+//       data:(await result).rows,
+//       totalRecords: ((await result).count),
+//       page,
+//       limit
+//     })
+//   } catch (error) {
+//     res.status(500).json({error:error.message})
+//   }
+// })
+// app.listen(port, () => console.log(`Example app listening on port http://localhost:${port}`));

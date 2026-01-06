@@ -20,7 +20,25 @@
 // }
 // console.log('%cmnd.js:21 fact 5', 'color: #007acc;', fact(5));
 
-console.log(square(5))
-function square(n) {
-  return n * n;
+// console.log(square(5))
+// function square(n) {
+//   return n * n;
+// }
+
+
+
+var twoSum = function (nums, target) {
+  let map = {}
+  for (let i = 0; i < nums.length; i++) {
+    let need = target - nums[i];
+
+    if (map[need] !== undefined) {
+      return [map[need], i]
+    }
+
+    map[nums[i]] = i;
+  }
 }
+// console.log(twoSum([2, 7, 11, 15],9));
+console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([3, 3], 6));
