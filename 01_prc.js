@@ -89,19 +89,14 @@
 // console.log(flattenArrayRecursive(nestedArr)); // Output: [1, 2, 3, 4, 5, 6, 7]
 
 
-
-
-
 // setTimeout(() => {
 //   console.log("setTimeout called After 1 Second");
 // }, 1000);
 
 
-
 setInterval(() => {
   console.log("setInterval called After 1 Second");
 }, 1000);
-
 
 
 // function repeat() {

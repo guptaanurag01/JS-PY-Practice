@@ -31,7 +31,6 @@
 //     }
 //     return true;
 // }
-
 // console.log(valid_anagram('Anurag', 'garunA'))
 
 // function charCount(str){
@@ -52,10 +51,11 @@
 function charCount(str) {
   let result = {};
   for (const i of str.toLowerCase()) {
-    if (result[i] > 0) result[i]++; 
-    else result[i] = 1;
+    if (result[i] > 0) 
+      result[i]++; 
+    else 
+      result[i] = 1;
   }
   return result;
 }
-
 console.log(charCount("HellO"));
