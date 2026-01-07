@@ -416,7 +416,6 @@ function rotate90(mat) {
 // console.log("\nRotated 90° Clockwise:");
 // printMatrix(rotate90(matrix));
 
-
 const TwoDmatrix = [
   [1, "*", 2, "*", "*", 3],
   [4, "*", 5, "*", 6, "*"],
@@ -426,22 +425,18 @@ const TwoDmatrix = [
 const extractNumbers = (matrix) => {
   let result = [];
   for (let row of matrix) {
+    let newVal = [];
     for (let val of row) {
-      if (typeof val === "number") {
-        result.push(val);
+      if (typeof val === "number" && val > 0) {
+        newVal.push(val);
       }
     }
+    result.push(newVal);
   }
   return result;
 };
-console.log(extractNumbers(TwoDmatrix));
+// console.log(extractNumbers(TwoDmatrix));
 
 
-
-// const extractNumbers1 = (matrix) =>
-//   matrix.flat().filter(val => typeof val === "number");
-
-// console.log(extractNumbers1(TwoDmatrix));
-
-
-
+const usingMap = TwoDmatrix.map(matrix => matrix.filter(val => typeof val === "number" &&  val> 0))
+console.log(usingMap);
