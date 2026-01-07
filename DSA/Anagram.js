@@ -52,14 +52,16 @@
 function charCount(str) {
   let result = {};
   for (const i of str.toLowerCase()) {
-    if (result[i] > 0) 
-      result[i]++; 
-    else 
+    if (result[i] > 0)
+      result[i]++;
+    else
       result[i] = 1;
   }
   return result;
 }
 console.log(charCount("HellO"));
+
+
 // function charCount(str) {
 //   let result = {};
 //   for (const i of str.toLowerCase()) {
@@ -79,3 +81,4 @@ console.log(charCount("HellO"));
 // return result
 // }
 // console.log(charCount("HelLo"))
+
