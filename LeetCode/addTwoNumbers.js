@@ -85,8 +85,8 @@ function listToArray(node) {
 }
 
 // Test
-let l1 = arrayToList([2,4,3]);
-let l2 = arrayToList([5,6,4]);
+let l1 = arrayToList([2, 4, 3]);
+let l2 = arrayToList([5, 6, 4]);
 
 let result = addTwoNumbers(l1, l2);
 console.log(listToArray(result));
