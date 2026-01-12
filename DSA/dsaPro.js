@@ -437,6 +437,38 @@ const extractNumbers = (matrix) => {
 };
 // console.log(extractNumbers(TwoDmatrix));
 
+const usingMap = TwoDmatrix.map((matrix) =>
+  matrix.filter((val) => typeof val === "number" && val > 0)
+);
+// console.log(usingMap);
 
-const usingMap = TwoDmatrix.map(matrix => matrix.filter(val => typeof val === "number" &&  val> 0))
-console.log(usingMap);
+//
+// // ================ Find Missing Number in Array
+
+// const arr = [3, 2, 5, 1, 6];
+// arr.sort((a, b) => a - b);
+// let missingNumber = arr;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i + 1] !== arr[i] + 1) {
+//     missingNumber = arr[i] + 1;
+//     break;
+//   }
+// }
+// console.log("Sorted Array:", arr);
+// console.log("Missing Number:", missingNumber);
+
+// // ////// wihtout Sort ==========
+const arr = [3, 2, 5, 1, 6];
+let max = Math.max(...arr);
+
+let actualSum = 0;
+for (let num of arr) {
+  actualSum += num;
+}
+
+let expectedSum = (max * (max + 1)) / 2;
+let missingNumber = expectedSum - actualSum;
+
+console.log("Missing Number:", missingNumber);
+
