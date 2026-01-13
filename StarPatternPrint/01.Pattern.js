@@ -1,17 +1,19 @@
-function start(n) {
-    for (let i = 1; i <= n; i++) {
-        let data = ""
-        for (let j = 1; j <= i; j++) {
-            data += "*"
-        }
-        console.log(data);
-    }
-}
-start(5)
-console.log()
+// function start(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let data = ""
+//         for (let j = 1; j <= i; j++) {
+//             data += "*"
+//         }
+//         console.log(data);
+//     }
+// }
+// start(5)
+// console.log()
 
+
+// //  ================== 5 BY 5 Square Pattern  ================
 // function SquareStar(n) {
-//   f  or (let i = 1; i <= n; i++) {
+//   for(let i = 1; i <= n; i++) {
 //         let data = ""
 //         for (let j = 1; j <= n; j++) {
 //             data += " *"
@@ -23,7 +25,7 @@ console.log()
 // console.log()
 
 
-// // // Right-Angled Diamond Pattern
+// // ================ Right-Angled Diamond Pattern  ================
 // function RightAngled(n) {
 //   for (let i = 1; i <= n; i++) {
 //     let row = "";
@@ -44,7 +46,7 @@ console.log()
 // RightAngled(5);
 
 
-// Diamond Pattern
+// // ================ Diamond Star Pattern ================
 // function Diamond_Pattern(n) {
 //     console.log("Diamond Pattern");
 //     for (let i = 1; i <= n; i++) {
@@ -230,24 +232,24 @@ console.log()
 // crossPattern(7)
 
 
-function zigZigPattern(n) {
-    console.log(" This is Zig-Zag Pattern");
-    for (let i = 1; i <= 3; i++) {
-        let row = ""
-        for (let j = 0; j <= n; j++) {
-            if (
-                (i === 1 && (j % 4 === 2)) ||
-                (i === 2 && (j % 2 === 1)) ||
-                (i === 3 && (j % 4 === 0))
-            ) {
-                row += "*"
-            } else {
-                row += " "
-            }
-        }
-        console.log(row);
-    }
-}
+// function zigZigPattern(n) {
+//     console.log("This is Zig-Zag Pattern");
+//     for (let i = 1; i <= 3; i++) {
+//         let row = ""
+//         for (let j = 0; j <= n; j++) {
+//             if (
+//                 (i === 1 && (j % 4 === 2)) ||
+//                 (i === 2 && (j % 2 === 1)) ||
+//                 (i === 3 && (j % 4 === 0))
+//             ) {
+//                 row += "*"
+//             } else {
+//                 row += " "
+//             }
+//         }
+//         console.log(row);
+//     }
+// }
 // zigZigPattern(15)
 
 

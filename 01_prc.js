@@ -94,9 +94,9 @@
 // }, 1000);
 
 
-setInterval(() => {
-  console.log("setInterval called After 1 Second");
-}, 1000);
+// setInterval(() => {
+//   console.log("setInterval called After 1 Second");
+// }, 1000);
 
 
 // function repeat() {

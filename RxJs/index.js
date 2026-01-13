@@ -28,20 +28,19 @@ const axios = require("axios");
 //   console.log("%cindex.js:4 OF: ", "color: #007acc;", res);
 // });
 
-// let obs$ = new Observable((subscribe) => {
-//   subscribe.next(1);
-//   subscribe.next(2);
-//   subscribe.next(3);
-//   subscribe.complete();
-// });
-
+let obs$ = new Observable((subscribe) => {
+  subscribe.next(1);
+  subscribe.next(2);
+  subscribe.next(3);
+  subscribe.complete();
+});
 // obs$.subscribe({
 //   next: (v) => console.log(v),
 //   error: (e) => console.log(e),
 //   complete: () => console.log("Completed!"),
 // });
 
-//   // Cold vs Hot Observables
+// // ================ Cold vs Hot Observables ================
 // const cold$ = interval(1000);
 // cold$.subscribe((v) => console.log("A", v));
 
@@ -100,7 +99,7 @@ const axios = require("axios");
 //   .pipe(
 //     switchMap(value =>
 //       of(value).pipe(
-//         delay(1000),
+//         delay(500),
 //         map(v => `Result ${v}`)
 //       )
 //     )
@@ -112,7 +111,7 @@ const axios = require("axios");
 // .pipe(
 //     mergeMap(value=>
 //         of(value).pipe(
-//             delay(1000),
+//             delay(100),
 //             map(v => `Result ${v}`)
 //         )
 //     )
@@ -151,9 +150,9 @@ const axios = require("axios");
 // subject.next(3)
 // subject.subscribe(v => console.log("B: ",v))
 
-const subject = new AsyncSubject();
-subject.subscribe((v) => console.log(v));
-subject.next(1);
-subject.next(2);
-subject.next(3);
-subject.complete();
+// const subject = new AsyncSubject();
+// subject.subscribe((v) => console.log(v));
+// subject.next(1);
+// subject.next(2);
+// subject.next(3);
+// subject.complete();
