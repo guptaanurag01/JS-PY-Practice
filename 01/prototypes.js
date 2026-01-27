@@ -14,7 +14,6 @@
 // console.log(p1.__proto__ === Person.prototype); // true
 // console.log(Person.prototype.__proto__ === Object.prototype); // true
 
-
 // const animal = {
 //     eat() {
 //       console.log('Eating...');
@@ -26,8 +25,11 @@
 //   };
 //   dog.eat();  // Eating... (inherited from animal)
 //   dog.bark(); // Barking...
-  
 
+function Bus() {}
+Bus.prototype.run = function () {
+  console.log("Running......");
+};
 
-
-
+const b1 = new Bus();
+b1.run();
