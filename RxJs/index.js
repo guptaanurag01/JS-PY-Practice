@@ -93,7 +93,7 @@ let obs$ = new Observable((subscribe) => {
 //   )
 //   .subscribe((x) => console.log(x));
 
-//  #    switchMap
+//  # =============== switchMap
 // console.log('--- switchMap ---');
 // of('A', 'B', 'C')
 //   .pipe(
@@ -156,3 +156,4 @@ let obs$ = new Observable((subscribe) => {
 // subject.next(2);
 // subject.next(3);
 // subject.complete();
+

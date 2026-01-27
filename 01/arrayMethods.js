@@ -1,6 +1,6 @@
 // let arr = [1, 2];
-// console.log("===Length==>",arr.length)
-// console.log("===Shift===>",arr.shift());
+// console.log("===Length==>", arr.length)
+// console.log("===Shift===>", arr.shift());
 // console.log("===unShift==>", arr.unshift());
 // console.log(arr);
 
