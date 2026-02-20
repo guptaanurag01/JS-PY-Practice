@@ -94,9 +94,9 @@
 // }, 1000);
 
 
-setInterval(() => {
-  console.log("setInterval called After 1 Second");
-}, 1000);
+// setInterval(() => {
+//   console.log("setInterval called After 1 Second");
+// }, 1000);
 
 
 // function repeat() {
@@ -106,3 +106,40 @@ setInterval(() => {
 //   }, 1000);
 // }
 // repeat();
+
+
+
+// // const Persons = { Rahul: 18, Raj: 19, Kunal: 9, Abhi: 17, Ajay: 25, Arjun: 68, Brijesh: 32, }; // Print all 1]the persons, who's age is 18 or above 18, in ascending order according to their age // Expected Output // ["Rahul", "Raj", "Ajay", "Brijesh", "Arjun"];
+const Persons = {
+  Rahul: 18, Raj: 19, Kunal: 9, Abhi: 17, Ajay: 25, Arjun: 68, Brijesh: 32,
+};
+
+// const result = Object.entries(Persons).filter(([name, age]) => age >= 18).sort((a, b) => a[1] - b[1]).map(([name]) => name)
+// console.log(result);
+
+// const anotherWay = Object.keys(Persons)
+// .filter(name => Persons[name] >= 18)
+// .sort((a,b)=> Persons[a] - Persons[b]);
+// console.log(anotherWay);
+
+
+
+// 2] based on last character of name. // Expected Output // ["Brijesh", "Raj", "Rahul", "Arjun", "Ajay"];
+
+
+// const result2 = Object.entries(Persons)
+//   .filter(([name, age]) => age >= 18)
+//   .map(([name]) => name)
+//   .sort((a, b) => {
+//     const lastA = a[a.length - 1];
+//     const lastB = b[b.length - 1];
+//     return lastA.localeCompare(lastB);
+//   })
+// console.log(result2);
+
+
+const result2 = Object.keys(Persons)
+  .filter(name => Persons[name] >= 18)
+  .sort((a, b) => a.slice(-1).localeCompare(b.slice(-1)));
+
+console.log(result2);
