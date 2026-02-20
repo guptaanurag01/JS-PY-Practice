@@ -1,3 +1,5 @@
+// // ====== Find smallest Number
+
 // function SmallestOfThree(a, b, c) {
 // 	if (a < b && a < c) {
 // 		return a;
@@ -10,7 +12,7 @@
 // }
 // console.log(SmallestOfThree(30,1,9));
 
-// // Revising a array
+// // =======   Revising a array
 // const ArrayReverse = (arr) => {
 //   let start = 0;
 //   let end = arr.length - 1;
@@ -260,7 +262,7 @@
 // let data = 5
 // console.log(fact(data));
 
-// let array = [1, 2, 3, 4, 5]
+// let array = [1, 2, 3, 4, 5]`
 // let sum1 = 0
 // for (let i = 0; i < array.length; i++) {
 //     sum1 += array[i]
@@ -437,6 +439,39 @@ const extractNumbers = (matrix) => {
 };
 // console.log(extractNumbers(TwoDmatrix));
 
+const usingMap = TwoDmatrix.map((matrix) =>
+  matrix.filter((val) => typeof val === "number" && val > 0)
+);
+// console.log(usingMap);
 
-const usingMap = TwoDmatrix.map(matrix => matrix.filter(val => typeof val === "number" &&  val> 0))
-console.log(usingMap);
+//
+// // ================ Find Missing Number in Array
+
+// const arr = [3, 2, 5, 1, 6];
+// arr.sort((a, b) => a - b);
+// let missingNumber = arr;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i + 1] !== arr[i] + 1) {
+//     missingNumber = arr[i] + 1;
+//     break;
+//   }
+// }
+// console.log("Sorted Array:", arr);
+// console.log("Missing Number:", missingNumber);
+
+// // // // // // // // //  // // // // // // //  //
+// // // ======= wihtout Sort ========== // // // //
+// // // // // // // // //  // // // // // // //  //
+// const arr = [3, 2, 5, 1, 6];
+// let max = Math.max(...arr);
+
+// let actualSum = 0;
+// for (let num of arr) {
+//   actualSum += num;
+// }
+
+// let expectedSum = (max * (max + 1)) / 2;
+// let missingNumber = expectedSum - actualSum;
+
+// console.log("Missing Number:", missingNumber);
