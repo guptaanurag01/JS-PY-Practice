@@ -107,5 +107,3 @@
 // console.log(landmarks);
 
 
-
-

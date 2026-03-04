@@ -13,7 +13,6 @@
 // }
 // console.log(a2['appreciate']);
 
-
 // <<-------------------------------------------------------------->>>>>
 
 // let a = 10;
@@ -23,12 +22,10 @@
 // console.log(a === b);
 // console.log(a !== b);
 
-
 // let x = 5;
 // let y = 10;
 // console.log(x < y && x < y);
 // console.log(x == y && x != y);
-
 
 //<<-------------------------------------------------------------->>>>>
 // contitional function
@@ -45,7 +42,6 @@
 //     alert("Your number is greater than 18");
 // }
 // console.log("Done1");
-
 
 // const day = 2;
 // switch (day) {
@@ -83,9 +79,7 @@
 //     console.log("age is not lies between 10 and 20");
 // }
 
-
 //<<-------------------------------------------------------------->>>>>
-
 
 // let age = prompt("what is age");
 // switch (age) {
@@ -112,20 +106,15 @@
 //     console.log("object is not divided by");
 // }
 
-
 // let age = prompt("age");
 // let a = age > 18 ? "You can drive" : "You can't drive"
 // console.log(a);
 
-
 //<<-------------------------------------------------------------->>\\
-
 
 // for (let i = 0; i < 10; i++) {
 //     console.log(i);
 // }
-
-
 
 // function factorial(n) {
 //     if (n === 0 || n === 1) {
@@ -150,3 +139,13 @@
 // n = Number.parseInt(n);
 
 //<<-------------------------------------------------------------->>fucntion
+
+function greet(city) {
+  console.log(this.name, city);
+}
+const user = { name: "Anurag" };
+
+greet.call(user, "Delhi");
+greet.apply(user, ["Mumbai"]);
+const boundGreet = greet.bind(user, "Pune");
+boundGreet();

@@ -1,13 +1,14 @@
 let p1 = new Promise((resolve, reject) => {
-    alert("altered")
+    console.log("___Altered___");
+    
     setTimeout(() => {
         resolve("resolved")
     }, 2000)
-})
+});
 
 
 p1.then(() => {
-    console.log("hurray")
+    console.log("hurray");
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("second resolved")

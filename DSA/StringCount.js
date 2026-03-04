@@ -6,13 +6,12 @@
 //                 result[char]++
 //             }
 //             else{
-//             result[char] = 1                
+//             result[char] = 1
 //             }
 //         }
 //     return result;
 // }
 // charCount("Hello")
-
 
 // const charCount = (str) =>{
 //     var obj = {};
@@ -30,18 +29,17 @@
 // }
 // charCount("Anurag @ Gupta")
 
-const charCount = (str) =>{
-    var obj = {};
-    for(let char of str){
-        char = char.toLowerCase()
-        if(/[a-z0-9]/.test(char)){
-            obj[char] = ++obj[char] || 1
-        }
-    }
-    return obj;
-}
-console.log(charCount("Anurag"));
-
+// const charCount = (str) =>{
+//     var obj = {};
+//     for(let char of str){
+//         char = char.toLowerCase()
+//         if(/[a-z0-9]/.test(char)){
+//             obj[char] = ++obj[char] || 1
+//         }
+//     }
+//     return obj;
+// }
+// console.log(charCount("Anurag"));
 
 // function isAlphaNumeric(char) {
 //     var code = char.charCodeAt(0);
@@ -52,18 +50,25 @@ console.log(charCount("Anurag"));
 //     }
 //     return true;
 // };
+
 // function charCount(str) {
 //     var obj = {};
 //     for (let char of str) {
-//         if (isAlphaNumeric(char)) {
+//         // if (isAlphaNumeric(char)) {
 //             char = char.toLowerCase();
 //             obj[char] = ++obj[char] || 1;
 //         };
-//     };
+//     // };
 //     return obj;
 // }
 // console.log(charCount("Anurag @ Gupta"));
 
-
-
-
+function cc(str) {
+  let res = {};
+  for (let val of str) {
+    val = val.toLowerCase();
+    res[val] = ++res[val] || 1;
+  }
+  return res;
+}
+console.log(cc("Anurag @ GUPTA"));

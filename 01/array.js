@@ -1,7 +1,7 @@
 // let person = {
-//     name: "John",
-//     age: 30,
-//     city: "New York"
+//   name: "John",
+//   age: 30,
+//   city: "New York",
 // };
 // console.log(Object.keys(person));
 // console.log(Object.values(person))
@@ -32,9 +32,9 @@
 // let slicedArr = arr.slice(1, 4)
 // console.log(slicedArr)
 
-// let arr = [1, 2, 3, 4]
-// arr.reverse()
-// console.log(arr)
+let arr = [1, 2, 3, 4]
+arr.reverse()
+console.log(arr)
 
 // let str = "apple,banana,cherry";
 // let arr = str.split(",");
@@ -178,9 +178,10 @@
 // fn();
 // fn();
 
+
 // let a = 5;
 // (function () {
-//   console.log(a); // ??
+//   console.log(a);
 //   let a = 10;
 // })();
 
@@ -232,7 +233,6 @@
 // }
 // start();
 
-
 // var x = 21;
 // var fun = function () {
 //   console.log(x);
@@ -240,13 +240,11 @@
 // };
 // fun();
 
-
 // let a = 5;
 // {
 //   console.log(a);
 //   let a = 10;
 // }
-
 
 // console.log("Start");
 // setTimeout(() => {
@@ -257,7 +255,6 @@
 // });
 // console.log("End");
 
-
 // async function test() {
 //   try {
 //     return await Promise.reject("Error!");
@@ -266,7 +263,6 @@
 //   }
 // }
 // test();
-
 
 // setTimeout(() => {
 //   console.log("1");
@@ -278,7 +274,6 @@
 //   }, 1000);
 // }, 1000);
 
-
 // async function chain() {
 //   console.log("A");
 //   await Promise.resolve();
@@ -288,7 +283,6 @@
 // }
 // chain();
 // console.log("D");
-
 
 // Promise.resolve()
 //   .then(() => {
@@ -319,12 +313,10 @@
 // foo();
 // console.log("4");
 
-
 // const p1 = new Promise(res => setTimeout(() => res("one"), 500));
 // const p2 = new Promise(res => setTimeout(() => res("two"), 100));
 // Promise.race([p1, p2]).then(console.log); // ?
 // Promise.all([p1, p2]).then(console.log);  // ?
-
 
 // function delay(ms) {
 //   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -342,5 +334,4 @@
 // });
 // p.then((res) => console.log(res))
 //  .catch((err) => console.log(err));
-
 

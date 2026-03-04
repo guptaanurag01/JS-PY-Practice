@@ -92,3 +92,27 @@
 //     for(let i=0; i<times; i++) fn();
 // }
 // repeat(()=>console.log("hi!"),3);
+
+
+const obj = {
+  name: "Anurag",
+  greet: function () {
+    setTimeout(()=> {
+      console.log(this.name);
+    }, 1000);
+  },
+};
+obj.greet();
+
+
+// const obj = {
+//   name: "Anurag",
+//   greet: function () {
+//     setTimeout(() => {
+//       console.log(this.name);
+//     }, 1000);
+//   },
+// };
+// obj.greet();
+
+

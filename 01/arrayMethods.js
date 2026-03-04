@@ -72,6 +72,6 @@
 // console.log(arr);
 
 
-// let a = ["a","b","c"];
-// console.log(a.splice(1,1,"Baccha"))
-// console.log(a);
+let a = ["a","b","c"];
+console.log(a.splice(1,1,"Baccha"))
+console.log(a);
